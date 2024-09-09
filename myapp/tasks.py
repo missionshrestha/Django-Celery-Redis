@@ -1,7 +1,7 @@
 from celery import shared_task
 from time import sleep
 
-@shared_task
+@shared_task(name='subtraction_task')
 def sub(x, y):
     sleep(5)
     return x - y

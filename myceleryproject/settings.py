@@ -129,6 +129,10 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 # Celery Settings
 # Celery Configuration Options
 CELERY_BROKER_URL = "redis://127.0.0.1:6379/0"
-CELERY_RESULT_BACKEND = "redis://127.0.0.1:6379/0"
-# CELERY_RESULT_BACKEND = "django-db"
+# CELERY_RESULT_BACKEND = "redis://127.0.0.1:6379/0"
+CELERY_RESULT_BACKEND = "django-db"
 CELERY_TIMEZONE = "Asia/Kolkata"
+
+# Enabled extended task results attributes (name, args, kwargs, worker, retries, queue, delivery_info) to be stored in the result backend. 
+
+CELERY_RESULT_EXTENDED = True 
