@@ -136,3 +136,22 @@ CELERY_TIMEZONE = "Asia/Kolkata"
 # Enabled extended task results attributes (name, args, kwargs, worker, retries, queue, delivery_info) to be stored in the result backend. 
 
 CELERY_RESULT_EXTENDED = True 
+
+# Method to schedule the tasks
+CELERY_BEAT_SCHEDULE = {
+    'add-every-10-seconds': {
+        'task': 'myapp.tasks.add',
+        'schedule': 10.0,
+        'args': ('11111', )
+    },
+    'sub-every-10-seconds': {
+        'task': 'myapp.tasks.sub',
+        'schedule': 10.0,
+        'args': ('11111', )
+    },
+    'clear-every-20-seconds': {
+        'task': 'myapp.tasks.clear_session_cache',
+        'schedule': 20.0,
+        'args': ('11111',)
+    }
+}
