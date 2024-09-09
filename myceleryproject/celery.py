@@ -29,23 +29,23 @@ def add(x, y):
 #     print(f'Request: {self.request!r}')
 
 # Method to schedule the tasks
-app.conf.beat_schedule = {
-    'clear-every-10-seconds': {
-        'task': 'myapp.tasks.clear_session_cache',
-        'schedule': 10.0,
-        'args': ('11111',)
-    }
-}
+# app.conf.beat_schedule = {
+#     'clear-every-10-seconds': {
+#         'task': 'myapp.tasks.clear_session_cache',
+#         'schedule': 10.0,
+#         'args': ('11111',)
+#     }
+# }
 
 # from datetime import timedelta
 # Using Time Delta
-app.conf.beat_schedule = {
-    'clear-every-10-seconds': {
-        'task': 'myapp.tasks.clear_session_cache',
-        'schedule': timedelta(seconds=10),
-        'args': ('11111',)
-    }
-}
+# app.conf.beat_schedule = {
+#     'clear-every-10-seconds': {
+#         'task': 'myapp.tasks.clear_session_cache',
+#         'schedule': timedelta(seconds=10),
+#         'args': ('11111',)
+#     }
+# }
 
 # from celery.schedules import crontab
 # Using CRON Tab

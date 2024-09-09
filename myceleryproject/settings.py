@@ -39,6 +39,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'myapp',
     'django_celery_results',
+    'django_celery_beat',
     
 ]
 
@@ -134,8 +135,10 @@ CELERY_RESULT_BACKEND = "django-db"
 CELERY_TIMEZONE = "Asia/Kolkata"
 
 # Enabled extended task results attributes (name, args, kwargs, worker, retries, queue, delivery_info) to be stored in the result backend. 
-
 CELERY_RESULT_EXTENDED = True 
+
+CELERY_BEAT_SCHEDULER = 'django_celery_beat.schedulers:DatabaseScheduler'
+
 
 # # Method to schedule the tasks
 # CELERY_BEAT_SCHEDULE = {

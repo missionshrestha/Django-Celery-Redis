@@ -10,3 +10,9 @@ def sub(x, y):
 def clear_session_cache(id):
     print(f"Session Cache Cleared : {id}")
     return id
+
+@shared_task
+def clear_redis_data(key):
+    print(f"Redis Data Cleared : {key}")
+    return key
+
