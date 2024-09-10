@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from myceleryproject.celery import add
+# from myceleryproject.celery import add
 # from myapp.tasks import sub
 from celery.result import AsyncResult
 # Create your views here.
@@ -29,8 +29,9 @@ from celery.result import AsyncResult
 
 # Display addition values after task execution
 def index(request):
-    result= add.delay(10,20)
-    return render(request, 'myapp/home.html',{'result':result})
+    # result= add.delay(10,20)
+    # return render(request, 'myapp/home.html',{'result':result})
+    return render(request, 'myapp/home.html')
 
 
 def check_result(request,task_id):
