@@ -49,16 +49,16 @@ def add(x, y):
 
 # from celery.schedules import crontab
 # Using CRON Tab
-app.conf.beat_schedule = {
-    'clear-every-1-minute': {
-        'task': 'myapp.tasks.clear_session_cache',
-        'schedule': crontab(minute='*/1'),
-        'args': ('11111',)
-    },
+# app.conf.beat_schedule = {
+#     'clear-every-1-minute': {
+#         'task': 'myapp.tasks.clear_session_cache',
+#         'schedule': crontab(minute='*/1'),
+#         'args': ('11111',)
+#     },
     
-    # 'sub-every-10-seconds': {
-    #     'task': 'myapp.tasks.sub(10,5)',
-    #     'schedule': 10.0,
-    #     'args': ('16', )
-    # },
-}
+#     'sub-every-10-seconds': {
+#         'task': 'myapp.tasks.sub(10,5)',
+#         'schedule': 10.0,
+#         'args': ('16', )
+#     },
+# }

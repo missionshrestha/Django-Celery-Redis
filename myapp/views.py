@@ -1,6 +1,6 @@
 from django.shortcuts import render
 from myceleryproject.celery import add
-from myapp.tasks import sub
+# from myapp.tasks import sub
 from celery.result import AsyncResult
 # Create your views here.
 
@@ -49,3 +49,4 @@ def about(request):
 def contact(request):
     print("Results: ")
     return render(request, 'myapp/contact.html')
+
